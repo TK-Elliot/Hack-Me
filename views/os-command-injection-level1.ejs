@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hack Me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body, html {height: 100%}
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    OSコマンドインジェクション(Level1)
+  </div>
+  <div class="w3-display-bottomright w3-padding-large w3-xlarge">
+    <a href="/">脆弱性一覧</a>
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-animate-top">Pingプログラム</h1>
+    <br><br><br>
+    <form method="post" action="/os-command-injection-post-1" style="display: flex; align-items: center;">
+      <label for="address">IP Address：</label>
+      <input type="text" name="address" style="margin-right: 20px;">
+      <input type="submit">
+    </form>
+    <br>
+    <h3>アウトプット：
+      <% if (typeof output !== 'undefined') { %>
+        <%= output %>
+      <% } %>
+    </h3>
+  </div>
+</div>
+
+</body>
+</html>

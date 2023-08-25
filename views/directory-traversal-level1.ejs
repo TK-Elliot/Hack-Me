@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hack Me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body, html {height: 100%}
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    ディレクトリトラバーサル(Level1)
+  </div>
+  <div class="w3-display-bottomright w3-padding-large w3-xlarge">
+    <a href="/">脆弱性一覧</a>
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-animate-top">ことわざ選択プログラム</h1>
+    <br><br><br>
+    <form method="post" action="/directory-traversal-post-1" style="display: flex; align-items: center;">
+        <select name="filename" style="margin-right: 20px; margin-left: 100px;">
+        <option value="kotowaza1.txt">ことわざ1</option>
+        <option value="kotowaza2.txt">ことわざ2</option>
+        <option value="kotowaza3.txt">ことわざ3</option>
+        </select>
+      <input type="submit">
+    </form>
+    <br>
+    <h3>ことわざ内容：
+      <% if (typeof content !== 'undefined') { %>
+        <%- content %>
+      <% } %>
+    </h3>
+  </div>
+</div>
+
+</body>
+</html>
